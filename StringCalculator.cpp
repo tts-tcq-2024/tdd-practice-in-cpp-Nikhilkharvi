@@ -65,7 +65,7 @@ int StringCalculator::add(const std::string& numbers) {
 	if (numbers.empty()) {
 	    return 0;
 	}
-  std::string delimiter = ",";
+  	std::string delimiter = ",";
 	std::string numbersWithoutDelimiter = numbers;
   	if (hasCustomDelimiter(numbers)) {
       	delimiter = extractDelimiter(numbers); // Extract custom delimiter
