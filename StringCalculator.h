@@ -1,4 +1,4 @@
-StringCalculator.h 
+StringCalculator.h
  
 #ifndef STRINGCALCULATOR_H
 #define STRINGCALCULATOR_H
