@@ -19,7 +19,6 @@ std::string extractNumbers(const std::string& numbers) {
 std::string normalizeNumbers(const std::string& numbers, const std::string& delimiter) {
 	return std::regex_replace(numbers, std::regex("\n"), delimiter);
 }
-
 void handleNumberWithinRange(int& num, std::string& item, std::string& negativeNumber, std::vector<int>& result) {
 	if (num < 0) {
 		negativeNumber = negativeNumber + item;
@@ -28,7 +27,6 @@ void handleNumberWithinRange(int& num, std::string& item, std::string& negativeN
 	  	result.push_back(num); // Ignore numbers greater than 1000
   	}
 }
-
 void handleParsedNumbers(std::string& item, std::string& negativeNumber, std::vector<int>& result) {
 	if (!item.empty()) {
 		int num = std::stoi(item);
@@ -43,7 +41,8 @@ std::vector<int> parseNumbers(const std::string& numbers, const std::string& del
 	std::vector<int> result;
 	std::stringstream ss(numbers);
 	std::string item;
-	std::string negativeNumber; 
+	std::string negativeNumber;
+ 
 	while (std::getline(ss, item, delimiter[0])) {
 		handleParsedNumbers(item, negativeNumber, result);
 	}
