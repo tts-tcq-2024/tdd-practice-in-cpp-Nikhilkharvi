@@ -1,4 +1,4 @@
-#include "StringCalculator.h"
+#include "StringCalculator.h" 
  
 bool hasCustomDelimiter(const std::string& numbers) {
     return numbers.substr(0, 2) == "//";
